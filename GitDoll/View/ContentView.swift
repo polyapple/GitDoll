@@ -1,9 +1,4 @@
-//
-//  ContentView.swift
-//  GitDoll
-//
-//  Created by polyappledev on 2023/06/03.
-//
+
 
 import SwiftUI
 

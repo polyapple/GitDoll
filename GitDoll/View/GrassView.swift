@@ -1,3 +1,4 @@
+
 import SwiftUI
 
 struct BarView: View {
@@ -14,12 +15,12 @@ struct BarView: View {
                 .foregroundColor(color)
         }
         .frame(width: width, height: 100)
-        .background(Color.gray)
+//        .background(Color.gray)
         .rotationEffect(Angle(degrees: rotationAngle / Double.pi), anchor: .bottom)
     }
 }
 
-struct GitDollView: View {
+struct GrassView: View {
     
     @State private var isRandom: Bool = true // 잔디 랜덤 배열 여부
     
@@ -45,24 +46,17 @@ struct GitDollView: View {
     }
     
     var body: some View {
-        ZStack {
-            Circle()
-                .frame(width: 200)
-            ForEach(0..<bars.count) { index in
-                let grassBars = isRandom ? bars.shuffled() : bars // 잔디 랜덤 적용
-                let rotationAngle = Double.random(in: -10...10)
-                BarView(height: grassBars[index], color: colors[index], rotationAngle: rotationAngle)
-                    .offset(x: dotPositions[index].x, y: dotPositions[index].y)
-            }
-
-            .offset(y: -40)
-
+        ForEach(0..<bars.count) { index in
+            let grassBars = isRandom ? bars.shuffled() : bars // 잔디 랜덤 적용
+            let rotationAngle = Double.random(in: -15...15)
+            BarView(height: grassBars[index], color: colors[index], rotationAngle: rotationAngle)
+                .offset(x: dotPositions[index].x, y: dotPositions[index].y)
         }
     }
 }
 
-struct GitDollView_Previews: PreviewProvider {
+struct GrassView_Previews: PreviewProvider {
     static var previews: some View {
-        GitDollView()
+        GrassView()
     }
 }
