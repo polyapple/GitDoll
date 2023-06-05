@@ -12,6 +12,7 @@
 		950615732A2DE10F00F80B73 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950615722A2DE10F00F80B73 /* MainView.swift */; };
 		950615752A2DE14100F80B73 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950615742A2DE14100F80B73 /* SettingView.swift */; };
 		950615772A2DEE2700F80B73 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950615762A2DEE2700F80B73 /* CustomView.swift */; };
+		950615792A2E03FE00F80B73 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950615782A2E03FE00F80B73 /* ButtonView.swift */; };
 		95621A682A2CD142000C36C7 /* GitDollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95621A672A2CD142000C36C7 /* GitDollView.swift */; };
 		9593AC362A2B5E45002AE934 /* GitDollApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9593AC352A2B5E45002AE934 /* GitDollApp.swift */; };
 		9593AC382A2B5E45002AE934 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9593AC372A2B5E45002AE934 /* ContentView.swift */; };
@@ -25,6 +26,7 @@
 		950615722A2DE10F00F80B73 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		950615742A2DE14100F80B73 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		950615762A2DEE2700F80B73 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		950615782A2E03FE00F80B73 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		95621A672A2CD142000C36C7 /* GitDollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitDollView.swift; sourceTree = "<group>"; };
 		9593AC322A2B5E45002AE934 /* GitDoll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitDoll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9593AC352A2B5E45002AE934 /* GitDollApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitDollApp.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 				9593AC372A2B5E45002AE934 /* ContentView.swift */,
 				950615742A2DE14100F80B73 /* SettingView.swift */,
 				950615722A2DE10F00F80B73 /* MainView.swift */,
+				950615782A2E03FE00F80B73 /* ButtonView.swift */,
 				95621A672A2CD142000C36C7 /* GitDollView.swift */,
 			);
 			path = View;
@@ -171,6 +174,7 @@
 				9506156D2A2DCE9B00F80B73 /* DollView.swift in Sources */,
 				9593AC362A2B5E45002AE934 /* GitDollApp.swift in Sources */,
 				95621A682A2CD142000C36C7 /* GitDollView.swift in Sources */,
+				950615792A2E03FE00F80B73 /* ButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -21,7 +21,7 @@ struct SettingView: View {
                                 .foregroundColor(.gray)
                         }
                     }
-                    NavigationLink(destination: CustomView()) { 
+                    NavigationLink(destination: CustomView()) {
                         Text("깃돌 꾸미기 변경")
                         
                     }
@@ -33,7 +33,7 @@ struct SettingView: View {
                 Section(header: Text("Git 설정"), footer: Text("Git 아이디 변경 시 꾸미기 설정이 초기화됩니다.")) {
                     NavigationLink(destination: InputBox(title: "Git 아이디 변경", defaultValue: $username)) {
                         HStack {
-                            Text("깃돌 이름 변경")
+                            Text("Git 아이디  변경")
                             Spacer()
                             Text(username)
                                 .foregroundColor(.gray)

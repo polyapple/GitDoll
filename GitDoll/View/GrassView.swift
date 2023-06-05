@@ -45,9 +45,13 @@ struct GrassView: View {
         }
     }
     
+    var grassBars: [Double] {
+        let modifiedBars = bars.map { $0 > 0 ? $0 + 10 : $0 } // 잔디값 보정
+        return isRandom ? modifiedBars.shuffled() : modifiedBars // 랜덤 적용
+    } // 잔디값 보정 및 랜덤 적용
+    
     var body: some View {
         ForEach(0..<bars.count) { index in
-            let grassBars = isRandom ? bars.shuffled() : bars // 잔디 랜덤 적용
             let rotationAngle = Double.random(in: -15...15)
             BarView(height: grassBars[index], color: colors[index], rotationAngle: rotationAngle)
                 .offset(x: dotPositions[index].x, y: dotPositions[index].y)

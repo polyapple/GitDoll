@@ -17,7 +17,6 @@ struct ContentView: View {
                 }
         }
         .accentColor(.green)
-        .padding(.horizontal)
         .onAppear() {
             UITabBar.appearance().barTintColor = .white
         }
