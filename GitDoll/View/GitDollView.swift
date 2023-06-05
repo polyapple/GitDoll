@@ -9,7 +9,7 @@ struct GitDollView: View {
         ZStack {
             GrassView()
                 .offset(y: -45)
-            CustomView()
+            DollView()
         }
     }
 }

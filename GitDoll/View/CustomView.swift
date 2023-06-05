@@ -1,11 +1,15 @@
-
+//
+//  CustomView.swift
+//  GitDoll
+//
+//  Created by polyappledev on 2023/06/05.
+//
 
 import SwiftUI
 
 struct CustomView: View {
     var body: some View {
-        Circle()
-            .frame(width: 200)
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 

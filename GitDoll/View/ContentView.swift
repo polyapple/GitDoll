@@ -4,11 +4,23 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            GitDollView()
-            Text("Hello, world!")
+        TabView {
+            MainView()
+                .tabItem {
+                    Image(systemName: "star.circle.fill")
+                    Text("나의 깃돌")
+                }
+            SettingView()
+                .tabItem {
+                    Image(systemName: "gearshape.fill")
+                    Text("깃돌 설정")
+                }
         }
-        .padding()
+        .accentColor(.green)
+        .padding(.horizontal)
+        .onAppear() {
+            UITabBar.appearance().barTintColor = .white
+        }
     }
 }
 
