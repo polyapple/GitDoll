@@ -2,6 +2,7 @@ import SwiftUI
 
 struct BarView: View {
     let height: Double
+    let width: Double = 10
     let color: Color
     let rotationAngle: Double
     
@@ -12,15 +13,17 @@ struct BarView: View {
                 .frame(height: height)
                 .foregroundColor(color)
         }
-        .frame(width: 10, height: 100)
+        .frame(width: width, height: 100)
         .background(Color.gray)
-//        .rotationEffect(Angle(degrees: rotationAngle / Double.pi), anchor: .bottom)
+        .rotationEffect(Angle(degrees: rotationAngle / Double.pi), anchor: .bottom)
     }
 }
 
 struct GitDollView: View {
     
-    let bars: [Double] = [100, 75, 50, 25, 0, 100, 75, 50, 25, 0, 100, 75, 50, 25, 0, 100, 75, 50, 25, 0, 100, 75, 50, 25, 0, 100, 80, 40, 20, 30]
+    @State private var isRandom: Bool = true // 잔디 랜덤 배열 여부
+    
+    let bars: [Double] = [100, 75, 50, 25, 0, 100, 75, 50, 25, 0, 100, 75, 50, 25, 0, 100, 75, 50, 25, 0, 100, 75, 50, 25, 0, 100, 75, 50, 25, 0]
     let colors: [Color] = [.red, .blue, .green, .orange, .purple, .red, .blue, .green, .orange, .purple, .red, .blue, .green, .orange, .purple, .red, .blue, .green, .orange, .purple, .red, .blue, .green, .orange, .purple, .red, .blue, .green, .orange, .purple]
     
     var dotPositions: [CGPoint] {
@@ -46,10 +49,12 @@ struct GitDollView: View {
             Circle()
                 .frame(width: 200)
             ForEach(0..<bars.count) { index in
-                let angle = Double(index) * Double.pi
-                BarView(height: bars[index], color: colors[index], rotationAngle: angle)
+                let grassBars = isRandom ? bars.shuffled() : bars // 잔디 랜덤 적용
+                let rotationAngle = Double.random(in: -10...10)
+                BarView(height: grassBars[index], color: colors[index], rotationAngle: rotationAngle)
                     .offset(x: dotPositions[index].x, y: dotPositions[index].y)
             }
+
             .offset(y: -40)
 
         }
