@@ -1,9 +1,6 @@
 import SwiftUI
 
 struct SettingView: View {
-    
-    @State var dollname: String = "깃돌이"
-    @State var username: String = "polyapple"
     @State var isRandom: Bool = true
     @State var notificationsEnabled: Bool = false
     @State private var previewIndex = 0
@@ -13,13 +10,17 @@ struct SettingView: View {
         NavigationView {
             Form {
                 Section(header: Text("깃돌 설정")) {
-                    NavigationLink(destination: InputBox(title: "깃돌 이름 변경", defaultValue: $dollname)) {
-                        HStack {
-                            Text("깃돌 이름 변경")
-                            Spacer()
-                            Text(dollname)
-                                .foregroundColor(.gray)
-                        }
+//                    NavigationLink(destination: InputBox(title: "깃돌 이름 변경", defaultValue: $dollname)) {
+//                        HStack {
+//                            Text("깃돌 이름 변경")
+//                            Spacer()
+//                            Text(dollname)
+//                                .foregroundColor(.gray)
+//                        }
+//                    }
+                    NavigationLink(destination: CustomView()) {
+                        Text("깃돌 설정 변경")
+                        
                     }
                     NavigationLink(destination: CustomView()) {
                         Text("깃돌 꾸미기 변경")
@@ -27,17 +28,6 @@ struct SettingView: View {
                     }
                     Toggle(isOn: $isRandom) {
                         Text("잔디 랜덤 배치")
-                    }
-                }
-                
-                Section(header: Text("Git 설정"), footer: Text("Git 아이디 변경 시 꾸미기 설정이 초기화됩니다.")) {
-                    NavigationLink(destination: InputBox(title: "Git 아이디 변경", defaultValue: $username)) {
-                        HStack {
-                            Text("Git 아이디  변경")
-                            Spacer()
-                            Text(username)
-                                .foregroundColor(.gray)
-                        }
                     }
                 }
             }

@@ -8,7 +8,7 @@ struct GitDollView: View {
     var body: some View {
         ZStack {
             GrassView()
-                .offset(y: 3)
+                .offset(y: 7)
             VStack{
             Spacer()
             DollView()

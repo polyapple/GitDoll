@@ -1,6 +1,13 @@
 
 import SwiftUI
 
+enum GrassImage: String {
+    case grass1 = "GitDollGrass1"
+    case grass2 = "GitDollGrass2"
+    case grass3 = "GitDollGrass3"
+    case grass4 = "GitDollGrass4"
+}
+
 struct BarView: View {
     let height: Double
     let width: Double = 10
@@ -10,12 +17,40 @@ struct BarView: View {
     var body: some View {
         VStack {
             Spacer()
-            Rectangle()
-                .frame(height: height)
-                .foregroundColor(color)
+//            Text("\(height)")
+//                .frame(width: 100)
+            if height == 110 {
+                Image("GitDollGrass4")
+                    .resizable()
+                    .frame(height: height)
+                    .foregroundColor(color)
+            } else if  height == 85 {
+                Image("GitDollGrass3")
+                    .resizable()
+                    .frame(height: height)
+                    .foregroundColor(color)
+            } else if  height == 60 {
+                Image("GitDollGrass2")
+                    .resizable()
+                    .frame(height: height)
+                    .foregroundColor(color)
+            } else if  height == 35 {
+                Image("GitDollGrass1")
+                    .resizable()
+                    .frame(height: height)
+                    .foregroundColor(color)
+            } else if  height == 0 {
+                EmptyView()
+            }
+            
+            
+//                        Image("GitDollGrass1")
+//                            .resizable()
+//                            .frame(height: height)
+//                            .foregroundColor(color)
         }
         .frame(width: width, height: 100)
-//        .background(Color.gray)
+        //        .background(Color.gray)
         .rotationEffect(Angle(degrees: rotationAngle / Double.pi), anchor: .bottom)
     }
 }

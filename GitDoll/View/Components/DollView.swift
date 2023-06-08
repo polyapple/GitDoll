@@ -4,8 +4,11 @@ import SwiftUI
 
 struct DollView: View {
     var body: some View {
-        Circle()
+        Image("GitDollBody")
+            .resizable()
+            .scaledToFit()
             .frame(width: 200)
+//        Circle()
     }
 }
 

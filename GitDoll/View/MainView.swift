@@ -23,16 +23,22 @@ struct MainView: View {
         ZStack{
             Color(UIColor.systemGray6)
                 .ignoresSafeArea()
-            VStack{
+            VStack(spacing: 20){
                 Spacer()
                 VStack{
                     HStack{
                     VStack{
                         Text("꾸준한 Git 커밋으로")
                             .font(.title)
-                        Text("나만의 잔디인형을\n가꿔보세요!")
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        Text("나만의 잔디인형을")
                             .font(.title)
                             .bold()
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        Text("가꿔보세요!")
+                            .font(.title)
+                            .bold()
+                            .frame(maxWidth: .infinity, alignment: .leading)
                     }
                     .frame(alignment: .leading)
                     Spacer()
@@ -50,6 +56,8 @@ struct MainView: View {
                 VStack{
                     Text("나의 커밋 기록")
                         .font(.headline)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.bottom)
                     HStack(spacing: 50){
                     ForEach(0..<myCommits.count) { index in
                         VStack{
@@ -65,7 +73,7 @@ struct MainView: View {
 
                 }
                 .frame(maxWidth: .infinity)
-                .padding()
+                .padding(30)
                 .background(Color.white)
                 .cornerRadius(10)
                 Spacer()
