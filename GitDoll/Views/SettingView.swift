@@ -71,5 +71,7 @@ struct InputBox: View {
 struct SettingView_Previews: PreviewProvider {
     static var previews: some View {
         SettingView()
+            .environmentObject(SettingValue())
+            .environmentObject(CustomSet())
     }
 }

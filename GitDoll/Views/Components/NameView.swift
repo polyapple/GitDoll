@@ -8,6 +8,7 @@ struct NameView: View {
     
     var body: some View {
         VStack {
+            Spacer()
             Text("Git 아이디를 입력해주세요")
                 .font(.headline)
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -36,6 +37,8 @@ struct NameView: View {
                     .stroke(Color.green, lineWidth: 2)
                     .opacity(isDollnameActive ? 1 : 0)
             )
+            Spacer()
+            ButtonView(title: "입력 완료", destination: CustomView())
         }
         .padding()
         

@@ -24,10 +24,10 @@ struct MakingView: View {
                     .padding(.bottom, 100)
                 NameView()
                 Spacer()
-                ButtonView(title: "입력 완료", destination: CustomView())
             }
             .padding(40)
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 

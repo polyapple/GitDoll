@@ -38,13 +38,11 @@ struct MainView: View {
             Color(UIColor.systemGray6)
                 .ignoresSafeArea()
             VStack(spacing: 20){
-                Spacer()
+
                 VStack{
-                    
-                        
                         if isFirst {
                             HStack{
-                    VStack{
+                                VStack {
                         Text("꾸준한 Git 커밋으로")
                             .font(.title)
                             .frame(maxWidth: .infinity, alignment: .leading)
@@ -66,7 +64,7 @@ struct MainView: View {
                                 .background(Color(UIColor.systemGray5))
                                 .cornerRadius(50)
                                 .transition(.scale)
-                    Spacer()
+                                .offset(y: 20)
                 }
                     GitDollView()
                         .scaledToFit()
@@ -78,7 +76,7 @@ struct MainView: View {
                     Text(settingValue.dollname)
                         .font(.title)
                         .bold()
-                    ButtonView(title: "나만의 깃돌 만들기", destination: CustomView())
+                    ButtonView(title: "나만의 깃돌 만들기", destination: MakingView())
                 }
                 .frame(maxWidth: .infinity)
                 .padding(30)
@@ -118,6 +116,7 @@ struct MainView: View {
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
+            .environmentObject(CustomSet())
             .environmentObject(SettingValue())
     }
 }

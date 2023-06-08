@@ -14,7 +14,7 @@ struct GitDollView: View {
             DollView()
             }
         }
-        .frame(height: 260)
+        .frame(height: 330)
 //        .background(.red)
     }
 }
@@ -22,5 +22,6 @@ struct GitDollView: View {
 struct GitDollView_Previews: PreviewProvider {
     static var previews: some View {
         GitDollView()
+            .environmentObject(CustomSet())
     }
 }
