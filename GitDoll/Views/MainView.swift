@@ -1,24 +1,37 @@
-//
-//  MainView.swift
-//  GitDoll
-//
-//  Created by polyappledev on 2023/06/05.
-//
+
 
 import SwiftUI
 
-struct MyCommit {
-    let name: String
-    let value: Int
-}
-
-let myCommits = [
-    MyCommit(name: "전체 커밋", value: 834),
-    MyCommit(name: "오늘 커밋", value: 3),
-    MyCommit(name: "연속 커밋", value: 72)
-]
-
 struct MainView: View {
+    
+    @State var isFirst = false
+    @State var randomMessage = ""
+    
+    struct MyCommit {
+        let name: String
+        let value: Int
+    }
+
+    let myCommits = [
+        MyCommit(name: "전체 커밋", value: 834),
+        MyCommit(name: "오늘 커밋", value: 3),
+        MyCommit(name: "연속 커밋", value: 72)
+    ]
+    
+    let bubbleMessages = [
+        "Let’s Git it!",
+        "기다리고 있었어요!",
+        "오늘도 커밋 해 주실거죠?",
+        "자라나라 머리머리~",
+        "커밋 모아 태산!",
+        "Hello World!",
+        "1일 1커밋, 잊지 않으셨죠?",
+        "저를 빡빡이로 두실건가요…?",
+        "어, 이게 왜 되지?",
+        "아깐 됐었는데…",
+        "머지??",
+    ]
+    
     var body: some View {
         ZStack{
             Color(UIColor.systemGray6)
@@ -26,7 +39,10 @@ struct MainView: View {
             VStack(spacing: 20){
                 Spacer()
                 VStack{
-                    HStack{
+                    
+                        
+                        if isFirst {
+                            HStack{
                     VStack{
                         Text("꾸준한 Git 커밋으로")
                             .font(.title)
@@ -40,11 +56,22 @@ struct MainView: View {
                             .bold()
                             .frame(maxWidth: .infinity, alignment: .leading)
                     }
+                    }
                     .frame(alignment: .leading)
+                        } else {
+                            Text(randomMessage)
+                                .padding(5)
+                                .padding(.horizontal, 10)
+                                .background(Color(UIColor.systemGray5))
+                                .cornerRadius(50)
+                                .transition(.scale)
                     Spacer()
                 }
                     GitDollView()
                         .frame(width: 120)
+                        .onTapGesture {
+                            randomMessage = bubbleMessages.randomElement() ?? ""
+                        }
                     Text("Hello, world!")
                     ButtonView(title: "나만의 깃돌 만들기", destination: CustomView())
                 }
