@@ -14,6 +14,7 @@
 		950615772A2DEE2700F80B73 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950615762A2DEE2700F80B73 /* CustomView.swift */; };
 		950615792A2E03FE00F80B73 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950615782A2E03FE00F80B73 /* ButtonView.swift */; };
 		9506157E2A30247900F80B73 /* NameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9506157D2A30247900F80B73 /* NameView.swift */; };
+		9518B1FB2A318076008DA9B4 /* CustomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9518B1FA2A318076008DA9B4 /* CustomModel.swift */; };
 		95621A682A2CD142000C36C7 /* GitDollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95621A672A2CD142000C36C7 /* GitDollView.swift */; };
 		9593AC362A2B5E45002AE934 /* GitDollApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9593AC352A2B5E45002AE934 /* GitDollApp.swift */; };
 		9593AC382A2B5E45002AE934 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9593AC372A2B5E45002AE934 /* ContentView.swift */; };
@@ -29,6 +30,7 @@
 		950615762A2DEE2700F80B73 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		950615782A2E03FE00F80B73 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		9506157D2A30247900F80B73 /* NameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameView.swift; sourceTree = "<group>"; };
+		9518B1FA2A318076008DA9B4 /* CustomModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModel.swift; sourceTree = "<group>"; };
 		95621A672A2CD142000C36C7 /* GitDollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitDollView.swift; sourceTree = "<group>"; };
 		9593AC322A2B5E45002AE934 /* GitDoll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitDoll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9593AC352A2B5E45002AE934 /* GitDollApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitDollApp.swift; sourceTree = "<group>"; };
@@ -51,6 +53,7 @@
 		9506156F2A2DCEDF00F80B73 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9518B1F72A317F79008DA9B4 /* Model */,
 				9518B1F62A317AF7008DA9B4 /* Components */,
 				9593AC372A2B5E45002AE934 /* ContentView.swift */,
 				950615742A2DE14100F80B73 /* SettingView.swift */,
@@ -70,6 +73,14 @@
 				9506157D2A30247900F80B73 /* NameView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		9518B1F72A317F79008DA9B4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9518B1FA2A318076008DA9B4 /* CustomModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		9593AC292A2B5E45002AE934 = {
@@ -179,6 +190,7 @@
 			files = (
 				950615712A2DCF0700F80B73 /* GrassView.swift in Sources */,
 				950615772A2DEE2700F80B73 /* CustomView.swift in Sources */,
+				9518B1FB2A318076008DA9B4 /* CustomModel.swift in Sources */,
 				950615732A2DE10F00F80B73 /* MainView.swift in Sources */,
 				9593AC382A2B5E45002AE934 /* ContentView.swift in Sources */,
 				950615752A2DE14100F80B73 /* SettingView.swift in Sources */,

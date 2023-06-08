@@ -13,7 +13,15 @@ struct CustomView: View {
         VStack{
         VStack {
             Text("나만의 깃돌 만들기")
+                .font(.title)
+                .bold()
+                .frame(maxWidth: .infinity, alignment: .leading)
+                
             Text("STEP2. 깃돌 꾸미기")
+                .font(.headline)
+                .bold()
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .foregroundColor(Color.green)
                     GitDollView()
             Spacer()
                   Picker("원하는 색을 골라주세요", selection: $selectedCategory) {
@@ -24,7 +32,7 @@ struct CustomView: View {
             
             
             
-
+                  Text("당신은 '\(customCategory[selectedCategory])' 를 선택하였습니다. ")
               }
               .pickerStyle(SegmentedPickerStyle())
             Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
