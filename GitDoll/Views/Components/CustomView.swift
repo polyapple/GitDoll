@@ -6,16 +6,6 @@ struct CustomView: View {
     var body: some View {
         VStack{
         VStack {
-            Text("나만의 깃돌 만들기")
-                .font(.title)
-                .bold()
-                .frame(maxWidth: .infinity, alignment: .leading)
-                
-            Text("STEP2. 깃돌 꾸미기")
-                .font(.headline)
-                .bold()
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .foregroundColor(Color.green)
                     GitDollView()
                   Picker("카테고리를 선택해주세요", selection: $selectedCategory) {
                       

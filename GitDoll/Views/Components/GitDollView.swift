@@ -15,7 +15,6 @@ struct GitDollView: View {
             }
         }
         .frame(height: 300)
-//        .background(Color.red)
     }
 }
 

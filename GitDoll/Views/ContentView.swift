@@ -4,6 +4,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        NavigationView {
         TabView {
             MainView()
                 .tabItem {
@@ -19,6 +20,7 @@ struct ContentView: View {
         .accentColor(.green)
         .onAppear() {
             UITabBar.appearance().barTintColor = .white
+        }
         }
     }
 }

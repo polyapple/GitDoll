@@ -10,6 +10,7 @@ struct NameView: View {
         VStack {
             Text("Git 아이디를 입력해주세요")
                 .font(.headline)
+                .frame(maxWidth: .infinity, alignment: .leading)
             TextField("Git ID", text: $username, onEditingChanged: { active in
                 isUsernameActive = active
             })
@@ -22,8 +23,9 @@ struct NameView: View {
             ) // 활성화 시 테두리 효과
             .padding(.bottom, 50)
             
-            Text("깃돌의 이름을 지어주세요.")
+            Text("깃돌의 이름을 지어주세요")
                 .font(.headline)
+                .frame(maxWidth: .infinity, alignment: .leading)
             TextField("GitDoll Name", text: $dollname, onEditingChanged: { active in
                 isDollnameActive = active
             })

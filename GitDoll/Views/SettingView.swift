@@ -10,14 +10,6 @@ struct SettingView: View {
         NavigationView {
             Form {
                 Section(header: Text("깃돌 설정")) {
-//                    NavigationLink(destination: InputBox(title: "깃돌 이름 변경", defaultValue: $dollname)) {
-//                        HStack {
-//                            Text("깃돌 이름 변경")
-//                            Spacer()
-//                            Text(dollname)
-//                                .foregroundColor(.gray)
-//                        }
-//                    }
                     NavigationLink(destination: CustomView()) {
                         Text("깃돌 설정 변경")
                         
