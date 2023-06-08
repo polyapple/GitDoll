@@ -68,10 +68,12 @@ struct MainView: View {
                     Spacer()
                 }
                     GitDollView()
+                        .scaledToFit()
                         .frame(width: 120)
                         .onTapGesture {
                             randomMessage = bubbleMessages.randomElement() ?? ""
                         }
+                    Text("Hello, world!")
                     Text("Hello, world!")
                     ButtonView(title: "나만의 깃돌 만들기", destination: CustomView())
                 }

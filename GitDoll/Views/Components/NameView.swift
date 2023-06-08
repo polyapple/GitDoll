@@ -37,6 +37,7 @@ struct NameView: View {
                     .opacity(isDollnameActive ? 1 : 0)
             )
         }
+        .padding()
         
     }
 }

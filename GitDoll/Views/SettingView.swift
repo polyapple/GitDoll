@@ -10,7 +10,7 @@ struct SettingView: View {
         NavigationView {
             Form {
                 Section(header: Text("깃돌 설정")) {
-                    NavigationLink(destination: CustomView()) {
+                    NavigationLink(destination: NameView()) {
                         Text("깃돌 설정 변경")
                         
                     }

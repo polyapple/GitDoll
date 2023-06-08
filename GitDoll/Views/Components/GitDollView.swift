@@ -8,13 +8,14 @@ struct GitDollView: View {
     var body: some View {
         ZStack {
             GrassView()
-                .offset(y: 7)
+//                .offset(y: 20)
             VStack{
             Spacer()
             DollView()
             }
         }
-        .frame(height: 300)
+        .frame(height: 260)
+//        .background(.red)
     }
 }
 

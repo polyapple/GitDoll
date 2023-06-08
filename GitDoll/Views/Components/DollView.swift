@@ -7,7 +7,7 @@ struct DollView: View {
         Image("GitDollBody")
             .resizable()
             .scaledToFit()
-            .frame(width: 200)
+            .frame(width: 170)
 //        Circle()
     }
 }

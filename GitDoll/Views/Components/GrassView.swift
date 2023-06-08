@@ -3,7 +3,7 @@ import SwiftUI
 
 struct BarView: View {
     let height: Double
-    let width: Double = 10
+    let width: Double = 8
     let color: Color
     let rotationAngle: Double
     
@@ -49,7 +49,7 @@ struct GrassView: View {
     let colors: [Color] = [.red, .blue, .green, .orange, .purple, .red, .blue, .green, .orange, .purple, .red, .blue, .green, .orange, .purple, .red, .blue, .green, .orange, .purple, .red, .blue, .green, .orange, .purple, .red, .blue, .green, .orange, .purple]
     
     var dotPositions: [CGPoint] {
-        let circleRadius = CGFloat(100) * 0.97
+        let circleRadius = CGFloat(85) * 0.96
         let startAngle = Angle(degrees: -90) // 9시 방향
         let endAngle = Angle(degrees: 90) // 3시 방향
         let angleRange = CGFloat(endAngle.radians - startAngle.radians)
@@ -58,7 +58,7 @@ struct GrassView: View {
         
         return bars.indices.map { index in
             let angle = CGFloat(startAngle.radians) + step * CGFloat(index)
-            let x = gap * CGFloat(index) - circleRadius + 10 / 2
+            let x = gap * CGFloat(index) - circleRadius + 8 / 2
             // x = 지름을 기준으로 균등한 간격으로 배치, 위치값 보정
             let y = -sqrt(pow(circleRadius, 2) - pow(x, 2))
             // y = 루트(반지름^2 - x^2) x좌표 기준으로 수직으로 원주에 닿는 거리값 계산, 방향 보정
