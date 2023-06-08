@@ -15,6 +15,7 @@ struct NameView: View {
             TextField("Git ID", text: $settingValue.username, onEditingChanged: { active in
                 isUsernameActive = active
             })
+            .autocapitalization(.none)
             .padding()
             .background(Color(UIColor.systemGray6))
             .overlay(
