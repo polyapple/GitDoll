@@ -12,7 +12,7 @@ struct ItemModel : Hashable {
 }
 
 extension CustomModel{
-    static var customModels : [CustomModel] =
+    static var customItems : [CustomModel] =
     [CustomModel(title: "눈",
                   item: [
                     ItemModel(name: "None", image: "NoItem"),
@@ -27,7 +27,7 @@ extension CustomModel{
                     ItemModel(name: "작은 코",image: "NosesItem2"),
                     ItemModel(name: "뾰족한 코", image: "NosesItem3"),
                   ]),
-     CustomModel(title: "악세사리",
+     CustomModel(title: "장식",
                  item: [
                    ItemModel(name: "None", image: "NoItem"),
                    ItemModel(name: "안경", image: "AccessoriesItem1"),

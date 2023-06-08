@@ -1,13 +1,7 @@
-//
-//  CustomView.swift
-//  GitDoll
-//
-//  Created by polyappledev on 2023/06/05.
-//
 
 import SwiftUI
+
 struct CustomView: View {
-    var customCategory = ["눈", "코", "장식"]
         @State private var selectedCategory = 0
     var body: some View {
         VStack{
@@ -23,16 +17,12 @@ struct CustomView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .foregroundColor(Color.green)
                     GitDollView()
-            Spacer()
-                  Picker("원하는 색을 골라주세요", selection: $selectedCategory) {
-                      ForEach(0 ..< customCategory.count) {
-                          Text(self.customCategory[$0])
+                  Picker("카테고리를 선택해주세요", selection: $selectedCategory) {
+                      
+                      ForEach(CustomModel.customItems, id: \.self) { customModel in
+                          Text(customModel.title)
                       }
                   }
-            
-            
-            
-                  Text("당신은 '\(customCategory[selectedCategory])' 를 선택하였습니다. ")
               }
               .pickerStyle(SegmentedPickerStyle())
             Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
