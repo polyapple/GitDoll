@@ -41,16 +41,23 @@ extension CustomModel{
     
 
 /* Setting용 구조체 */
-struct SettingModel: Hashable {
-    var userName: String
-    var dollName: String
-    var isRandom: Bool
+
+class SettingValue: ObservableObject {
+    @Published var dollname: String = "깃돌이"
+    @Published var username: String = "polyapple"
 }
 
-extension SettingModel {
-    static var customSettings: [SettingModel] = [
-        SettingModel(userName: "깃돌이", dollName: "polyapple", isRandom: true)
-    ]
-}
+//struct SettingModel: Hashable {
+//    var userName: String
+//    var dollName: String
+//    var isRandom: Bool
+//}
+//
+//extension SettingModel {
+//    static var customSettings: [SettingModel] = [
+//        SettingModel(userName: "깃돌이", dollName: "polyapple", isRandom: true)
+//    ]
+//}
+
 
 

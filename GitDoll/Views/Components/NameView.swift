@@ -1,8 +1,8 @@
 import SwiftUI
 
 struct NameView: View {
-    @State var dollname: String = "깃돌이"
-    @State var username: String = "polyapple"
+    
+    @EnvironmentObject var settingValue: SettingValue
     @State var isUsernameActive: Bool = false
     @State var isDollnameActive: Bool = false
     
@@ -11,7 +11,7 @@ struct NameView: View {
             Text("Git 아이디를 입력해주세요")
                 .font(.headline)
                 .frame(maxWidth: .infinity, alignment: .leading)
-            TextField("Git ID", text: $username, onEditingChanged: { active in
+            TextField("Git ID", text: $settingValue.username, onEditingChanged: { active in
                 isUsernameActive = active
             })
             .padding()
@@ -26,7 +26,7 @@ struct NameView: View {
             Text("깃돌의 이름을 지어주세요")
                 .font(.headline)
                 .frame(maxWidth: .infinity, alignment: .leading)
-            TextField("GitDoll Name", text: $dollname, onEditingChanged: { active in
+            TextField("GitDoll Name", text: $settingValue.dollname, onEditingChanged: { active in
                 isDollnameActive = active
             })
             .padding()
@@ -45,5 +45,6 @@ struct NameView: View {
 struct NameView_Previews: PreviewProvider {
     static var previews: some View {
         NameView()
+            .environmentObject(SettingValue())
     }
 }

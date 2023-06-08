@@ -34,5 +34,6 @@ struct MakingView: View {
 struct MakingView_Previews: PreviewProvider {
     static var previews: some View {
         MakingView()
+            .environmentObject(SettingValue())
     }
 }

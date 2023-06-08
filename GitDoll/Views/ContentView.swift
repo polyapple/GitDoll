@@ -22,11 +22,13 @@ struct ContentView: View {
             UITabBar.appearance().barTintColor = .white
         }
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(SettingValue())
     }
 }

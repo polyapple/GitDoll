@@ -55,8 +55,8 @@
 		9506156F2A2DCEDF00F80B73 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9518B1F62A317AF7008DA9B4 /* Components */,
 				9593AC372A2B5E45002AE934 /* ContentView.swift */,
+				9518B1F62A317AF7008DA9B4 /* Components */,
 				950615742A2DE14100F80B73 /* SettingView.swift */,
 				CED7CE252A3228B000736E37 /* MakingView.swift */,
 				950615722A2DE10F00F80B73 /* MainView.swift */,

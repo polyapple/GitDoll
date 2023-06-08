@@ -4,6 +4,7 @@ import SwiftUI
 
 struct MainView: View {
     
+    @EnvironmentObject var settingValue: SettingValue
     @State var isFirst = false
     @State var randomMessage = ""
     
@@ -73,8 +74,10 @@ struct MainView: View {
                         .onTapGesture {
                             randomMessage = bubbleMessages.randomElement() ?? ""
                         }
-                    Text("Hello, world!")
-                    Text("Hello, world!")
+                    Text(settingValue.username + "의")
+                    Text(settingValue.dollname)
+                        .font(.title)
+                        .bold()
                     ButtonView(title: "나만의 깃돌 만들기", destination: CustomView())
                 }
                 .frame(maxWidth: .infinity)
@@ -115,5 +118,6 @@ struct MainView: View {
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
+            .environmentObject(SettingValue())
     }
 }
